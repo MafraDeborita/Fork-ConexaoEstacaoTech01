@@ -11,5 +11,3 @@
 
 - chatbot para comunicação com a comunidade
 - landing page para patrocínio e parceria com voluntários
-
-- 
