@@ -90,3 +90,8 @@ section {
 .imgEstacao{
     width: 100%;
 }
+
+.tituloEstacoes{
+    color: var(--color-primary-6);
+    font-size: 1 rem;
+}

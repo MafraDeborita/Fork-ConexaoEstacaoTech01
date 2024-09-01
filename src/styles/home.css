@@ -59,8 +59,7 @@
 }
 
 #banner img {
-    height: 100%;
-    width: fit-content;
+    width: 50%;
 }
 
 .shape {
@@ -80,8 +79,6 @@
         padding-top: 0px;
     }
 
-    #banner,
-    #banner img,
     #home .shape {
         display: none;
     }
