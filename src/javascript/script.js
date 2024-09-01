@@ -58,3 +58,29 @@ $(document).ready(function() {
         distance: '20%'
     })
 });
+
+
+
+(function(){
+    emailjs.init("service_kh42n0m");  // Substitua pelo seu User ID do EmailJS
+})();
+
+// Função para tratar o envio do formulário
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio do formulário padrão
+
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    var contactType = document.getElementById('contact-type').value;
+
+    emailjs.send("service_gmail", "template_abc123", {
+        from_email: email,
+        message: message,
+        contact_type: contactType
+    })
+    .then(function(response) {
+        alert('E-mail enviado com sucesso!');
+    }, function(error) {
+        alert('Erro ao enviar o e-mail. Tente novamente.');
+    });
+});
