@@ -173,3 +173,18 @@ button:hover {
     transform: scale(1.1);
 }
 
+/* Media query para ajustar em telas menores */
+@media (max-width: 480px) {
+    .whatsapp-button {
+        right: 10px; /* Ajusta a posição direita para garantir que o botão fique visível */
+        bottom: 10px; /* Ajusta a posição inferior para garantir que o botão fique visível */
+        width: 50px; /* Reduz o tamanho do botão */
+        height: 50px; /* Reduz o tamanho do botão */
+    }
+
+    .whatsapp-button img {
+        width: 30px; /* Ajusta o tamanho da imagem dentro do botão */
+        height: 30px; /* Ajusta o tamanho da imagem dentro do botão */
+    }
+}
+
