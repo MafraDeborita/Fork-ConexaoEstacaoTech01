@@ -61,11 +61,6 @@ $(document).ready(function() {
 
 
 
-(function(){
-    emailjs.init("service_kh42n0m");  // Substitua pelo seu User ID do EmailJS
-})();
-
-// Função para tratar o envio do formulário
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Impede o envio do formulário padrão
 
@@ -73,14 +68,13 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     var message = document.getElementById('message').value;
     var contactType = document.getElementById('contact-type').value;
 
-    emailjs.send("service_gmail", "template_abc123", {
-        from_email: email,
-        message: message,
-        contact_type: contactType
-    })
-    .then(function(response) {
-        alert('E-mail enviado com sucesso!');
-    }, function(error) {
-        alert('Erro ao enviar o e-mail. Tente novamente.');
-    });
+    // Codifica os dados para serem usados na URL
+    var subject = encodeURIComponent(contactType);
+    var body = encodeURIComponent("Mensagem:\n" + message + "\n\nEnviado por: " + email);
+
+    // Cria a URL para abrir o Gmail com os dados preenchidos
+    var gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=wendelreis1123@gmail.com&su=${subject}&body=${body}`;
+
+    // Abre o Gmail em uma nova aba ou janela
+    window.open(gmailUrl, '_blank');
 });

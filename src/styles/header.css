@@ -38,6 +38,8 @@ header {
 
 #mobile_btn {
     display: none;
+    text-decoration: none;
+    color: #1d1d1dad;
 }
 
 #mobile_menu {
